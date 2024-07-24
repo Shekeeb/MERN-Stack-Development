@@ -53,9 +53,9 @@ function multiplication(num1,num2){
 function division(num1,num2){
     return new Promise((resolve,reject)=>{
         if (num1==0) {
-            reject("Num1 is zero")
+            reject("Num1 is zero")  //Error state-reject
         }
-        resolve(num1/num2)
+        resolve(num1/num2)          //Success state-resolve
     })
 }
 
