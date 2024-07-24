@@ -1,8 +1,8 @@
-// Callback   Here,it leads to callback hell
+// Callback   it leads to callback hell
 function add(num1, num2, callback) {
     let err = false
     if (num1 == 0) {
-        err = true
+        console.log("Error")
     }
     else {
         callback(num1 + num2, err)
@@ -17,7 +17,7 @@ function division(num1, num2, callback) {
 
 add(10, 20, (sum, err) => {
     if (err) {
-        console.log("Error")
+        console.log(err)
     }
     else {
         console.log(sum)
