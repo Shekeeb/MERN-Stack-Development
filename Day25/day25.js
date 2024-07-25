@@ -21,7 +21,7 @@ Promise.all([getName(),getAddress()]).then((result)=>{
 
 
 //Async and Await
-async function user(){                 // it will lead to pending promise unless using await & async
+async function user(){                 // it will lead to pending promise, unless using await & async
     let name=await getName()
     console.log(name)                  //it takes 3s to print
     let address=await getAddress()
