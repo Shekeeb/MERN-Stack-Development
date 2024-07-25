@@ -16,7 +16,7 @@ function getAddress(){
 }
 
 Promise.all([getName(),getAddress()]).then((result)=>{
-    console.log(result)  //It takes 10s to print the result
+    console.log(result)  //It takes 5s to print the result
 })
 
 
