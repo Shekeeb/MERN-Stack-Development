@@ -14,6 +14,7 @@ console.log(std2)
 std2.display()
 
 
+
 //Date object constructor
 var date=new Date("16 August 2001")
 console.log(date.getDate())
