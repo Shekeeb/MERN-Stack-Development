@@ -6,6 +6,7 @@ function task1(time){
     }
 }
 
+
 console.log("Task 1 Started")
 task1(3000)
 console.log("Task 1 Ended")
