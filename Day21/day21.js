@@ -8,6 +8,7 @@ console.log('Sum= ' + (num1 + num2));
 const string=readlineSync.question("Enter a string: ")
 console.log(swapCase(string))
 
+
 let sum=0
 for(var i=2;i<=50;i=i+2){
     sum=sum+i
