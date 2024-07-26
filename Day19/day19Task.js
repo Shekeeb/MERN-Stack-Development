@@ -16,6 +16,7 @@ Prime(10)
 Prime(7)
 
 
+
 //Palindrome
 function Palindrome(string) {
     var string = string.toLowerCase()
