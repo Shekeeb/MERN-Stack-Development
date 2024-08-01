@@ -15,13 +15,11 @@ app.get("/login", (req, res) => {
   res.sendFile(path.join(__dirname, "form.html"));
 });
 
-//Middleware  To perform something just after request or just before response.ie, authentication,cookies,sessions...etc
-const Middleware=(req,res,next)=>{
-    console.log("Login done")
-    next()
-}
-
-app.use(Middleware)
+//Middleware  To perform something after request or before response.ie, authentication,cookies,sessions...etc
+app.use((req,res,next)=>{
+  console.log("Login Success")
+  next()
+})
 
 app.post("/loginaction", (req, res) => {
   const { name, place } = req.body;
