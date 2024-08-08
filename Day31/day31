@@ -15,7 +15,7 @@ db.COLECTION_NAME.insert({Name:"shekeeb",Age:22,Place:"Malappuram"}) - To insert
 				OR
 db.COLECTION_NAME.insertOne({Name:"shekeeb",Age:22,Place:"Malappuram"}) - To insert a document
 
-db.COLECTION_NAME.insertMany([{Name:"favas",Age:22,Place:"palakkad"},{Name:"shammas",Age:25,Place:"calicut"},{Name:"favas",Age:22,Place:"Mannarkkad"}]) - To insert more than one document
+db.COLECTION_NAME.insertMany([{Name:"favas",Age:22,Place:"palakkad"},{Name:"shammas",Age:25,Place:"calicut"},							{Name:"favas",Age:22,Place:"Mannarkkad"}]) - To insert more than one document
 
 db.COLLECTION_NAME.find() - To display all documents
 
@@ -34,14 +34,13 @@ db.COLLECTION_NAME.find({Age:{$gt:22}}) - //Display documents which has Age>22  
 			       -> Notin -$nin
 
 
-db.COLLECTION_NAME.find({$and:[{Name:"favas"},{Place:"Palakkad"}]})  //Dispay document which has Name=favas and Place=palakkad    ie,Logical operator
+db.COLLECTION_NAME.find({$and:[{Name:"favas"},{Place:"Palakkad"}]})  //Dispay document which has Name=favas and 												Place=palakkad    ie,Logical operator
 
 						Logical operators:-
 						-----------------
 				              -> $and -and
 					      -> $or  -or
 					      -> $not -not
-
 
 db.COLLECTION_NAME.find().count()  -     // To display the no.of documents  ie,Aggregate operators
 
@@ -50,9 +49,12 @@ db.COLLECTION_NAME.find().count()  -     // To display the no.of documents  ie,A
 				       -> count()   - // find no.of counts
 				       -> sort({Name:1}) - // sort in ascending order based on Name    1-Ascending
 				       -> sort({Name:-1}) - // sort in descending order based on Name  -1-Descending
+				       -> $group()
+				       -> $match()
+				       -> $limit()
+				       -> $project()
 
-
-db.COLLECTION_NAME.find({},{Name:1}) - To dispaly only particular fiels, ie, Projection  1-Display  0-Hide //Display Name of all documents
+db.COLLECTION_NAME.find({},{Name:1}) - To dispaly only particular fiels, ie, Projection  1-Display  0-Hide //Display Name 													         of all documents
 		OR
 db.COLLECTION_NAME.find({},{Name:0}) - To hide only particular fields    // Hide Name of all documents
 
@@ -69,3 +71,5 @@ db.COLLECTION_NAME.remove({})   - To remove all documents
 db.COLLECTION_NAME.drop() - To drop collection
 
 db.dropDatabase() - To drop database
+
+$regex - E-mail or phone validation
