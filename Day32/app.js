@@ -29,7 +29,8 @@ app.post("/user",async(req,res)=>{
     }) 
     try{
         const regUser=await user.save()
-        res.status(201).json(regUser)
+        //res.status(201).json(regUser)
+        res.json({message:"User Registered successfully..!"})
     }
     catch(err){
         res.status(400).json({message:err.message})
@@ -71,7 +72,8 @@ app.put("/user/:id",async(req,res)=>{
     try{
         const updateUser=await User.findByIdAndUpdate(req.params.id,req.body,{new:true})
         if(updateUser){
-            res.json(updateUser)
+            //res.json(updateUser)
+            res.json({message:"User Updated Successfully..!"})
         }
         else{
             res.status(404).json({message:"User Not Found..!"})
@@ -88,7 +90,7 @@ app.delete("/user/:id",async(req,res)=>{
     try{
         const deleteUser=await User.findByIdAndDelete(req.params.id)
         if(deleteUser){
-            res.json({message:"User Deleted Succesfully"})
+            res.json({message:"User Deleted Succesfully..!"})
         }
         else{
             res.status(404).json({message:"User Not Found..!"})
