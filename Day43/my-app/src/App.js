@@ -7,6 +7,7 @@ import Contact from './Components/Contact';
 function App() {
 
   const navigate = useNavigate()
+  
   return (
     <div className="App">
       <Link to='/about'>About</Link>
