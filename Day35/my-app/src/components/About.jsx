@@ -2,6 +2,7 @@ import React from 'react'
 
 var age=19
 const About = () => {
+  
   return (
     <div>
         <p>3+4</p>
