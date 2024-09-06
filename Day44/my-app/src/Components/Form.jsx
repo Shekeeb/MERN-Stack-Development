@@ -63,6 +63,12 @@ const Form = () => {
     if (Object.keys(newError).length === 0) {
       console.log('Form submitted successfully', form)
     }
+
+    setForm({
+      name:'',
+      phone:'',
+      email:''
+    })
   }
 
   return (
