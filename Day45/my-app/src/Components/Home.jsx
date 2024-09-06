@@ -20,9 +20,15 @@ const Home = () => {
 
     return (
         <div>
-            {comments.map((value) => (
-                <h4 key={value.id}>{value.name}</h4>
-            ))}
+            {comments.map((value) => {
+                return (
+                    <div>
+                        <h4>Name:{value.name}</h4>
+                        <h4>E-mail:{value.email}</h4>
+                        <p>Body:{value.body}</p>
+                    </div>
+                )
+            })}
         </div>
     )
 }
