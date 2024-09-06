@@ -5,6 +5,7 @@ import { useEffect } from 'react'
 
 
 const fetchData = async (setComments) => {
+    
     try {
         const response = await axios.get("https://jsonplaceholder.typicode.com/comments")
         setComments(response.data)
