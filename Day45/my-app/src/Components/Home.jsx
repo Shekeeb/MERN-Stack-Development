@@ -1,22 +1,17 @@
-import React from 'react'
-import axios from 'axios'
-import { useState } from 'react'
-import { useEffect } from 'react'
-
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 const fetchData = async (setComments) => {
-    
     try {
-        const response = await axios.get("https://jsonplaceholder.typicode.com/comments")
+        const response = await axios.get("https://jsonplaceholder.typicode.com/comments");
         setComments(response.data)
-        console.log("Data:",response.data)
+        console.log(response.data)
     } catch (error) {
         console.log("Error fetching data", error)
     }
 }
 
 const Home = () => {
-
     const [comments, setComments] = useState([])
 
     useEffect(() => {
@@ -25,15 +20,9 @@ const Home = () => {
 
     return (
         <div>
-            {comments.map((value) => {
-                return (
-                    <div>
-                        <h4>Name:{value.name}</h4>
-                        <h4>Email:{value.email}</h4>
-                        <p>Body:{value.body}</p>
-                    </div>
-                )
-            })}
+            {comments.map((value) => (
+                <h4 key={value.id}>{value.name}</h4>
+            ))}
         </div>
     )
 }
